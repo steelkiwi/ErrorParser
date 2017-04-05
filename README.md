@@ -3,7 +3,7 @@ Simple JSON parser for Android
 
 ## Usage
 
-[Parser] removes all nesting and empty object from JSON, so you can easy get your object by key or position. Class will help you to get object from JSON with different variants.
+[Parser] removes all nesting and empty objects from JSON, so you can easy get your object by key or position. Class will help you to get object from JSON with different variants.
 
 Example of JSON:
 we'll call it myJson
