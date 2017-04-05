@@ -108,4 +108,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 
-[Parser]: <https://github.com/>
+[Parser]: <https://github.com/steelkiwi/ErrorParser/blob/master/app/src/main/java/com/steelkiwi/errorparser/Parser.java/>
