@@ -22,7 +22,7 @@ Example of JSON:
 ```
 
 
-simpleParsing(json)
+Parser.simpleParsing(json)
 ```java
 String simpleParsing(String stringJson) {
     //will return "field1 - error1"
@@ -30,7 +30,7 @@ String simpleParsing(String stringJson) {
 ```
 
 
-simpleParsing(json, "field1")
+Parser.simpleParsing(json, "field1")
 ```java
 String simpleParsing(String stringJson, String exceptKey) {
     //will return "error1"
@@ -38,7 +38,7 @@ String simpleParsing(String stringJson, String exceptKey) {
 ```
 
 
-getMessageByPosition(json, 1, 1)
+Parser.getMessageByPosition(json, 1, 1)
 ```java
 String getMessageByPosition(String source, int keyPosition, int messagePosition) {
     //will return "error4"
@@ -46,7 +46,7 @@ String getMessageByPosition(String source, int keyPosition, int messagePosition)
 ```
 
 
-getMessageByPosition(json, "field4", 0)
+Parser.getMessageByPosition(json, "field4", 0)
 ```java
 String getMessageByPosition(String source, String key, int messagePosition) {
     //will return "error7"
@@ -54,7 +54,7 @@ String getMessageByPosition(String source, String key, int messagePosition) {
 ```
 
 
-getKeyWithMessageByPosition(json, 3, 1)
+Parser.getKeyWithMessageByPosition(json, 3, 1)
 ```java
 String getKeyWithMessageByPosition(String source, int keyPosition, int messagePosition) {
     //will return "field3 - error6"
@@ -62,7 +62,7 @@ String getKeyWithMessageByPosition(String source, int keyPosition, int messagePo
 ```
 
 
-getKeyWithMessageByPosition(json, "non_fields_error1", 1)
+Parser.getKeyWithMessageByPosition(json, "non_fields_error1", 1)
 ```java
 String getKeyWithMessageByPosition(String source, String key, int messagePosition) {
     //will return "non_fields_error1 - "error12""
@@ -70,7 +70,7 @@ String getKeyWithMessageByPosition(String source, String key, int messagePositio
 ```
 
 
-getMessageByKey(json, "non_fields_error")
+Parser.getMessageByKey(json, "non_fields_error")
 ```java
 String getMessageByKey(String source, String key) {
     //will return "error10"
@@ -78,7 +78,7 @@ String getMessageByKey(String source, String key) {
 ```
 
 
-getMessageByKey(json, "non_fields_error1", 0)
+Parser.getMessageByKey(json, "non_fields_error1", 0)
 ```java
 String getMessageByKey(String source, String key, int messagePosition) {
     //will return "error11"
@@ -86,7 +86,7 @@ String getMessageByKey(String source, String key, int messagePosition) {
 ```
 
 
-getMessageByKeyPosition(json, 1)
+Parser.getMessageByKeyPosition(json, 1)
 ```java
 String getMessageByKeyPosition(String source, int keyPosition) {
     //will return "error3, error4"
@@ -94,10 +94,10 @@ String getMessageByKeyPosition(String source, int keyPosition) {
 ```
 
 
-getClearedJson(json)
+Parser.getClearedJson(json)
 ```java
 String getClearedJson(String source) {
-    //will return your string JSON with out empty objects
+    //will return your string JSON without nesting and empty objects
 }
 ```
 
