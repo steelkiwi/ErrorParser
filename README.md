@@ -6,6 +6,7 @@ Simple JSON parser for Android
 [Parser] removes all nesting and empty object from JSON, so you can easy get your object by key or position. Class will help you to get object from JSON with different variants.
 
 Example of JSON:
+we'll call it myJson
 ```json
 {
   "field1": ["error1", []],
@@ -22,7 +23,7 @@ Example of JSON:
 ```
 
 
-Parser.simpleParsing(json)
+Parser.simpleParsing(myJson)
 ```java
 String simpleParsing(String stringJson) {
     //will return "field1 - error1"
@@ -30,7 +31,7 @@ String simpleParsing(String stringJson) {
 ```
 
 
-Parser.simpleParsing(json, "field1")
+Parser.simpleParsing(myJson, "field1")
 ```java
 String simpleParsing(String stringJson, String exceptKey) {
     //will return "error1"
@@ -38,7 +39,7 @@ String simpleParsing(String stringJson, String exceptKey) {
 ```
 
 
-Parser.getMessageByPosition(json, 1, 1)
+Parser.getMessageByPosition(myJson, 1, 1)
 ```java
 String getMessageByPosition(String source, int keyPosition, int messagePosition) {
     //will return "error4"
@@ -46,7 +47,7 @@ String getMessageByPosition(String source, int keyPosition, int messagePosition)
 ```
 
 
-Parser.getMessageByPosition(json, "field4", 0)
+Parser.getMessageByPosition(myJson, "field4", 0)
 ```java
 String getMessageByPosition(String source, String key, int messagePosition) {
     //will return "error7"
@@ -54,7 +55,7 @@ String getMessageByPosition(String source, String key, int messagePosition) {
 ```
 
 
-Parser.getKeyWithMessageByPosition(json, 3, 1)
+Parser.getKeyWithMessageByPosition(myJson, 3, 1)
 ```java
 String getKeyWithMessageByPosition(String source, int keyPosition, int messagePosition) {
     //will return "field3 - error6"
@@ -62,7 +63,7 @@ String getKeyWithMessageByPosition(String source, int keyPosition, int messagePo
 ```
 
 
-Parser.getKeyWithMessageByPosition(json, "non_fields_error1", 1)
+Parser.getKeyWithMessageByPosition(myJson, "non_fields_error1", 1)
 ```java
 String getKeyWithMessageByPosition(String source, String key, int messagePosition) {
     //will return "non_fields_error1 - "error12""
@@ -70,7 +71,7 @@ String getKeyWithMessageByPosition(String source, String key, int messagePositio
 ```
 
 
-Parser.getMessageByKey(json, "non_fields_error")
+Parser.getMessageByKey(myJson, "non_fields_error")
 ```java
 String getMessageByKey(String source, String key) {
     //will return "error10"
@@ -78,7 +79,7 @@ String getMessageByKey(String source, String key) {
 ```
 
 
-Parser.getMessageByKey(json, "non_fields_error1", 0)
+Parser.getMessageByKey(myJson, "non_fields_error1", 0)
 ```java
 String getMessageByKey(String source, String key, int messagePosition) {
     //will return "error11"
@@ -86,7 +87,7 @@ String getMessageByKey(String source, String key, int messagePosition) {
 ```
 
 
-Parser.getMessageByKeyPosition(json, 1)
+Parser.getMessageByKeyPosition(myJson, 1)
 ```java
 String getMessageByKeyPosition(String source, int keyPosition) {
     //will return "error3, error4"
@@ -94,7 +95,7 @@ String getMessageByKeyPosition(String source, int keyPosition) {
 ```
 
 
-Parser.getClearedJson(json)
+Parser.getClearedJson(myJson)
 ```java
 String getClearedJson(String source) {
     //will return your string JSON without nesting and empty objects
