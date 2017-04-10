@@ -23,12 +23,14 @@ we'll call it myJson
 ```
 
 
+
 Parser.simpleParsing(myJson)
 ```java
 String simpleParsing(String stringJson) {
     //will return "field1 - error1"
 }
 ```
+
 
 
 Parser.simpleParsing(myJson, "field1")
@@ -39,12 +41,14 @@ String simpleParsing(String stringJson, String exceptKey) {
 ```
 
 
+
 Parser.getMessageByPosition(myJson, 1, 1)
 ```java
 String getMessageByPosition(String source, int keyPosition, int messagePosition) {
     //will return "error4"
 }
 ```
+
 
 
 Parser.getMessageByPosition(myJson, "field4", 0)
@@ -55,12 +59,14 @@ String getMessageByPosition(String source, String key, int messagePosition) {
 ```
 
 
+
 Parser.getKeyWithMessageByPosition(myJson, 3, 1)
 ```java
 String getKeyWithMessageByPosition(String source, int keyPosition, int messagePosition) {
     //will return "field3 - error6"
 }
 ```
+
 
 
 Parser.getKeyWithMessageByPosition(myJson, "non_fields_error1", 1)
@@ -71,12 +77,14 @@ String getKeyWithMessageByPosition(String source, String key, int messagePositio
 ```
 
 
+
 Parser.getMessageByKey(myJson, "non_fields_error")
 ```java
 String getMessageByKey(String source, String key) {
     //will return "error10"
 }
 ```
+
 
 
 Parser.getMessageByKey(myJson, "non_fields_error1", 0)
@@ -87,12 +95,14 @@ String getMessageByKey(String source, String key, int messagePosition) {
 ```
 
 
+
 Parser.getMessageByKeyPosition(myJson, 1)
 ```java
 String getMessageByKeyPosition(String source, int keyPosition) {
     //will return "error3, error4"
 }
 ```
+
 
 
 Parser.getClearedJson(myJson)
